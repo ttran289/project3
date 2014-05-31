@@ -2,3 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#badges{
+	margin-top: 220px;
+}
+
+#hunt,h2{
+	display: inline-block;
+	margin-top: 80px;
+}
+
+.orbit-container{
+position: absolute;
+top: 45%;
+margin-top: 52px;
+width: 300px;
+height: 500px;
+color: white;
+background-color: none;
+z-index: 10;
+margin-left: -82px;
+}
+/*h2{
+	display: inline-block;
+}*/

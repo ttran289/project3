@@ -1,7 +1,49 @@
-<div class ="welcome">
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">The Hunt</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Go to the Gallery</a></li>
+    </ul>
+  </section>
+</nav>
+<div class="row">
+  <div class="large-4 columns" id ="badges">
+	  	<ul data-orbit data-options= "animation:slide; navigation_arrows:false; bullets:false;slide_number: false;">
+		  <li>
+		    <%= image_tag "Cinderella.png"%>
+		  </li>
+		  <li>
+		    <%= image_tag "elsa.png"%>
+		  </li>
+		  <li>
+		    <%= image_tag "meg.png"%>
+		  </li>
+		</ul>
+  </div>
 
+  <div class="large-8 columns" id ="hunt">
+  	<h2>The hunt</h2>
+  	<a href="#" class="button tiny radius", style ="margin-left: 327px">Sign Up</a>
+  	<a href="#" class="button tiny radius">Sign In</a>
+  	<div class="panel radius", style = "opacity:0.7">
+	  <h4>Explore the hidden treasure of Disney Land</h4>
+		<p>Receive rewards for taking pictures with Disney Characters while making a digital scrapbook of fun memories at Disneyland!</p>
 
+		<p>Disney Picture Collector is a fast, beautiful and fun way to go on a Disney Character Treasure hunt at Disneyland/ Disneyland California Adventure Park.</p>  
 
+		<p>Take a picture of yourself with a Disney character and post the picture to Disney Picture Collector. Once the picture is posted, you will receive a reward of a digital badge of the character you took the picture with that you can share with friends and family.</p>
 
+		<p>It’s a new and exciting way to experience Disneyland!</p>
+
+		<p>There are 77 digital badges… can you collect them all?</p>
+	</div>
+  </div>
 </div>

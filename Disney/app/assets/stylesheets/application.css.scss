@@ -12,7 +12,12 @@
  *
  *= require_tree .
  *= require_self
+
+ //= require foundation_and_overrides
+
  */
+
+
  body{
  	background-image: url("cinderellacastle.jpg");
  	background-size: cover;
