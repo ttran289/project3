@@ -11,15 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140530034620) do
+ActiveRecord::Schema.define(version: 20140602061109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: true do |t|
+  create_table "badges", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "comments", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "content"
+    t.integer  "user_id"
+  end
+
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "pictures", force: true do |t|
     t.string   "badge"
@@ -27,6 +37,16 @@ ActiveRecord::Schema.define(version: 20140530034620) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_badges", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "badge_id"
+  end
+
+  add_index "user_badges", ["badge_id"], name: "index_user_badges_on_badge_id", using: :btree
+  add_index "user_badges", ["user_id"], name: "index_user_badges_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "first_name"

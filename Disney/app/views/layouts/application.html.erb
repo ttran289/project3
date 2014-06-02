@@ -11,10 +11,26 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-  	
-  	
+<body>
+ <nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">The Hunt</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
+      <li ><a href="#">Go to the Gallery</a></li>
+    </ul>
+  </section>
+</nav>
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
-  </body>
+</body>
 </html>
