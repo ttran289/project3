@@ -24,7 +24,7 @@ class PicturesController < ApplicationController
 	def create
 		@picture = current_user.pictures.new(post_params)
 		if @picture.save
-			redirect_to root_path
+			redirect_to users_path
 		else
 			render 'new'
 		end
@@ -36,14 +36,14 @@ class PicturesController < ApplicationController
 
 	def destroy
 		Picture.find(params[:id]).destroy
-		redirect_to root_path
+		redirect_to users_path
 	end
 
 
 	private
 		
 		def post_params
-			params.require(:picture).permit(:caption, :picture)
+			params.require(:picture).permit(:caption, :image)
 		end
 
 		def set_post

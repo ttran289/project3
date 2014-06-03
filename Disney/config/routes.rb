@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :users
-  resources :sessions
+  resource :sessions
   resources :maps
+  resources :sign_out
   resources :pictures do
     resources :comments
   end

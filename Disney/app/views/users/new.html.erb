@@ -1,13 +1,19 @@
-<h3>New User</h3>
-<form>
-  <fieldset>
-    <legend>Fieldset Legend</legend>
 
-    <label>Input Label
-      <input type="text" placeholder="Inputs and other form elements go inside...">
-    </label>
-  </fieldset>
-</form>
+<h3>New User</h3>
+
+  
+    
+      <%= form_for @user do |f| %>
+        First Name: <%= f.text_field :first_name %>
+        Last Name <%= f.text_field :last_name %>
+        <br>
+        <br>
+        Email: <%= f.text_field :email %>
+        <br>
+        <br>
+        Password: <%= f.password_field :password %>
+        <%= f.submit "Join the fun!" %>
+      <% end %>
 	
 		
 			

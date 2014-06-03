@@ -21,20 +21,22 @@
   </div>
 
   <div class="large-8 columns" id ="hunt">
-  	<h2>The hunt</h2>
-  	<a href="#" class="button tiny radius", style ="margin-left: 327px">Sign Up</a>
-  	<a href="#" class="button tiny radius">Sign In</a>
-  	<div class="panel radius", style = "opacity:0.7">
-	  <h4>Explore the hidden treasure of Disney Land</h4>
-		<p>Receive rewards for taking pictures with Disney Characters while making a digital scrapbook of fun memories at Disneyland!</p>
+  	<h2 class="text-left">The hunt</h2>
+  	<% if !current_user%>
+  	<%= link_to "Sign Up", new_user_path, class: "button tiny radius"%> 
+  	<%else%>
+  	<%end%>
+	  	<div class="panel radius", style = "opacity:0.7">
+		  <h4>Explore the hidden treasure of Disney Land</h4>
+			<p>Receive rewards for taking pictures with Disney Characters while making a digital scrapbook of fun memories at Disneyland!</p>
 
-		<p>Disney Picture Collector is a fast, beautiful and fun way to go on a Disney Character Treasure hunt at Disneyland/ Disneyland California Adventure Park.</p>  
+			<p>Disney Picture Collector is a fast, beautiful and fun way to go on a Disney Character Treasure hunt at Disneyland/ Disneyland California Adventure Park.</p>  
 
-		<p>Take a picture of yourself with a Disney character and post the picture to Disney Picture Collector. Once the picture is posted, you will receive a reward of a digital badge of the character you took the picture with that you can share with friends and family.</p>
+			<p>Take a picture of yourself with a Disney character and post the picture to Disney Picture Collector. Once the picture is posted, you will receive a reward of a digital badge of the character you took the picture with that you can share with friends and family.</p>
 
-		<p>It’s a new and exciting way to experience Disneyland!</p>
+			<p>It’s a new and exciting way to experience Disneyland!</p>
 
-		<p>There are 77 digital badges… can you collect them all?</p>
-	</div>
+			<p>There are 77 digital badges… can you collect them all?</p>
+		</div>
   </div>
 </div>

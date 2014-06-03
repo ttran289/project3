@@ -1,0 +1,12 @@
+<div class = "showpic"> 
+<h1>Welcome to your page</h1>
+<h2>Start adding pictures to earn badges</h2>
+
+
+<% @pictures.each do |p| %>
+  <%= image_tag p.image.url(:medium)%>
+  
+<%= link_to 'Delete',p, method: :delete%>
+<%end%>
+<%= link_to 'New Picture', new_picture_path(current_user) %>
+</div>

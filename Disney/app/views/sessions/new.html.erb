@@ -1,3 +1,7 @@
 <h1> Sign in form</h1>
-
-	
+	<%= form_for :session, :url => sessions_path do |l| %>
+		  Email: <%= l.text_field :email, class: "form-control" %>
+		  Password: <%= l.password_field :password,class: "form-control" %>
+			  <br/>
+		<%= l.submit "Login" %>
+	<% end %>
