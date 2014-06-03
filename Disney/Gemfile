@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'foundation-rails'
@@ -42,5 +43,5 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails'
 end
-
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
