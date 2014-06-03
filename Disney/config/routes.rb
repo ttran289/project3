@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'badges/name'
+  resources :badges
   resources :users
   resource :sessions
   resources :maps

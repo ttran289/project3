@@ -1,7 +1,9 @@
-<h1> Sign in form</h1>
-	<%= form_for :session, :url => sessions_path do |l| %>
-		  Email: <%= l.text_field :email, class: "form-control" %>
-		  Password: <%= l.password_field :password,class: "form-control" %>
-			  <br/>
-		<%= l.submit "Login" %>
-	<% end %>
+
+	<fieldset>
+		<legend> Sign in </legend>
+			<%= form_for :session, :url => sessions_path do |l| %>
+			  <label>Email: <%= l.text_field :email, class: 'form-control', autofocus: true, placeholder: 'Email Address' %></label>
+			  <label>Password: <%= l.password_field :password,class: 'form-control', autofocus: true, placeholder: 'password' %></label>
+			  <%= l.submit "Login", class: "button radius" %>
+			<% end %>
+	</fieldset>

@@ -1,20 +1,16 @@
 
-<h3>New User</h3>
-
-  
+    <fieldset>
+        <legend>New User</legend>
     
       <%= form_for @user do |f| %>
-        First Name: <%= f.text_field :first_name %>
-        Last Name <%= f.text_field :last_name %>
-        <br>
-        <br>
-        Email: <%= f.text_field :email %>
-        <br>
-        <br>
-        Password: <%= f.password_field :password %>
-        <%= f.submit "Join the fun!" %>
+        <label>First Name: <%= f.text_field :first_name, class: 'form-control', autofocus: true, placeholder: 'First Name' %> </label>
+        <label>Last Name <%= f.text_field :last_name, class: 'form-control', autofocus: true, placeholder: 'Last Name' %></label>
+        <label>Email: <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: 'your email address' %></label>
+        <label>Password: <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: 'password' %></label>
+        <%= f.submit "Join the fun!", class: "button round" %>
       <% end %>
-	
+    </fieldset>
+
 		
 			
 		
