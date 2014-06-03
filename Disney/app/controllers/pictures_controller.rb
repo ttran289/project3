@@ -9,8 +9,8 @@ class PicturesController < ApplicationController
 	# end
 
 	def show
-		@picture = Picture.find(params[:id])
-		@comments = @picture.comments
+		# @picture = Picture.find(params[:id])
+		# @pictures = Picture.all
 	end
 
 	def new

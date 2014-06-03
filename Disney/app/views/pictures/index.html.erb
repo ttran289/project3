@@ -1,1 +1,3 @@
-<h3>This will display all the pictures taken by all the users</h3>
+<% @pictures.each do|p| %>
+<%= image_tag p.image(:medium) %>
+<%end%>
