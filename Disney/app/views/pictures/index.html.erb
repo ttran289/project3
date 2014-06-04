@@ -1,5 +1,30 @@
-<h2>People who participated in the hunt</h2>
-<br>
-<% @pictures.each do|p| %>
-<%= image_tag p.image(:medium) %>
-<%end%>
+<h1>How did they earn the badges???</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Photo</th>
+      <th>Caption</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pictures.each do |p| %>
+      <tr>
+        <td><%= image_tag p.image(:medium) %></td>
+        <td><%= p.caption %></td>
+        <td><%= p.date%></td>
+        <td><label>Lat:</label><%= p.latitude%></td>
+        <td><label>Long:</label><%= p.longitude%></td>
+        <td><%= link_to 'Delete',p, method: :delete%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
