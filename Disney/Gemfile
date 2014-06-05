@@ -48,4 +48,4 @@ gem 'aws-sdk'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'exifr'
-gem 'pry'
+

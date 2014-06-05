@@ -2,36 +2,15 @@
  
  
   <div class="row">
- 
+  <% current_user.badges.each do |b|%>
     <div class="large-3 columns small-6 columns">
       <div class="panel">
-          <%= image_tag "badges/Aladdin.png"%>
-          <p class ="text-center">Aladin</p>
+          <%= image_tag "badges/" + b.url%>
+
+          <p class ="text-center"><%=b.name%></p>
       </div>
     </div>
-
-    <div class="large-3 columns small-6 columns">
-      <div class="panel">
-          <%= image_tag "badges/alice.png"%>
-      </div>
-    </div>
-
-	<div class="large-3 columns small-6 columns">
-      <div class="panel">
-          <%= image_tag "badges/anna.png"%>
-      </div>
-    </div>
-
-    <div class="large-3 columns small-6 columns">
-      <div class="panel">
-          <%= image_tag "badges/anna.png"%>
-      </div>
-    </div>
-    
-
-
-
- 
+    <%end%>
 </div>
  
  

@@ -1,8 +1,7 @@
 class BadgesController < ApplicationController
   def index
   	@badges = Badge.all
+  	@picture = Picture.new
   end
-  def show
-  	@badge = Badge.find(params[:name])
-  end
+  
 end

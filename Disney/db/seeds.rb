@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Badge.destroy_all
 
-Badge.create(name: "aladdin", url: "alladin.png")
+Badge.create(name: "aladdin", url: "aladdin.png")
 Badge.create(name: "alice", url: "alice.png")
 Badge.create(name: "anna", url: "anna.png")
 Badge.create(name: "ariel", url: "ariel.png")

@@ -1,7 +1,6 @@
 <h3>add a picture</h3>
-<%= form_for @picture, :html => { :multipart => true } do |form| %>
+<%= form_for @picture, :html => { :multipart => true } do |f| %>
 
-  <%= form.file_field :image %>
-  <%= form.text_field :caption%>
-  <%= form.submit%>
-<% end %>
+  <%= f.file_field :image %>
+  <%= f.submit%>
+<% end %> 

@@ -45,7 +45,7 @@ class PicturesController < ApplicationController
 	private
 		
 		def post_params
-			params.require(:picture).permit(:caption, :image)
+			params.require(:picture).permit(:caption, :image, :badge_id)
 		end
 
 		def set_post
