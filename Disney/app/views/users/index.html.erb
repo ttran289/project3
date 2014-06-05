@@ -1,15 +1,50 @@
-<div class = "showpic"> 
-<h1>Welcome to your Treasure Chest</h1>
-<h2>Start adding pictures to earn badges</h2>
-<br>
+<div class="row">
+    <div class="large-12 columns">
+ 
+      <div class="row">
+ 
+        <div class="large-4 small-12 columns">
+ 
+          <img src="http://placehold.it/500x500&text=Logo" style ="margin-top:30px">
+ 
+          <div class="hide-for-small panel" style ="margin-top:30px">
+            <h3>Header</h3>
+            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
+            </h5>
+            <%= link_to 'New Picture', new_picture_path(current_user) %>
+          </div>
+        </div>
+ 
+        <div class="large-8 columns">
+          <div class="row" style ="margin-top:30px">
+            <% @pictures.each do |p| %>
+            <div class="large-4 small-6 columns">
+              
+			  <%= image_tag p.image.url(:medium)%>
+			  <br>
+			  
+			  <%= link_to 'Delete',p, method: :delete%>
 
-
-<% @pictures.each do |p| %>
-  <%= image_tag p.image.url(:medium)%>
-  <br>
-  
-<%= link_to 'Delete',p, method: :delete%>
-<%end%>
-<br>
-<%= link_to 'New Picture', new_picture_path(current_user) %>
-</div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+ 
+      <footer class="row">
+        <div class="large-12 columns"><hr/>
+          <div class="row">
+ 
+            <div class="large-6 columns">
+              <p>© Copyright no one at all. Go to town.</p>
+            </div>
+ 
+ 
+          </div>
+        </div>
+      </footer>
+ 
+     
+ 
+    </div>
+  </div>
