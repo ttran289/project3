@@ -11,7 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-<body style ="background-color:black">
+<body>
  <nav class="top-bar" data-topbar >
   <ul class="title-area">
     <li class="name">
@@ -25,14 +25,16 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <%if !current_user%>
+      <li ><%= link_to 'The Collection', badges_path%></li>
       <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
       <li ><%= link_to 'Go to the Gallery', pictures_path%></li>
       <li><%= link_to "Sign in", new_sessions_path%></li>
       <% else %>
+      <li class="active" ><%= link_to 'The Collection', badges_path%></li>
       <li class = "has-dropdown">
         <%= link_to 'Your Picture Collection', users_path%>
           <ul class = "dropdown">
-            <li><%= link_to 'Collected Badges', badges_path%></li>
+            <li><%= link_to 'Collected Badges', my_badges_path%></li>
           </ul>
       </li>
       <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
