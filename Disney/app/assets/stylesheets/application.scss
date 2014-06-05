@@ -18,13 +18,25 @@
  
  */
 
-
- body{
- 	
- 	
- 	
- 	
+ .panel{
+ 	border-radius: 15px;
  }
+
+#pictureindex{
+	background-color: #2399d7;
+
+}
+#userpictures{
+	background-image: url(disneypark.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+ #signup{
+	background-image: url(cinderellacastle.jpg);
+	background-size: cover;
+
+}
 
  legend {
  	font-size: 40px;

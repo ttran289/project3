@@ -1,5 +1,38 @@
+<body id ="welcome">
+ <nav class="top-bar" data-topbar >
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to 'The Hunt', root_path%></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
-  <div class="row">
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <%if !current_user%>
+      <li ><%= link_to 'The Collection', badges_path%></li>
+      <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
+      <li ><%= link_to 'Go to the Gallery', pictures_path%></li>
+      <li><%= link_to "Sign in", new_sessions_path%></li>
+      <% else %>
+      <li class="active" ><%= link_to 'The Collection', badges_path%></li>
+      <li class = "has-dropdown">
+        <%= link_to 'Your Picture Collection', users_path%>
+          <ul class = "dropdown">
+            <li><%= link_to 'Collected Badges', my_badges_path%></li>
+          </ul>
+      </li>
+      <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
+      <li ><%= link_to 'Go to the Gallery', pictures_path%></li>
+      <li><%= link_to "Sign out", sessions_path, :method => :delete %></li>
+      <%end %>
+    </ul>
+  </section>
+</nav>
+
+  <div class="row" style ="margin-top: 70px">
   	<aside class="large-3 columns" class ="text-center">
       <ul data-orbit data-options="animation:fade; navigation_arrows:false; bullets:false;slide_number: false; animation:'fade';timer_speed: 900" class ="text-center">
         <li>
@@ -246,9 +279,10 @@
       <article>
  
         <h3>The Hunt<% if !current_user%>
-  	<%= link_to "Sign Up", new_user_path, class: "button tiny radius"%> 
-  	<%else%>
-  	<%end%></h3>
+          	<%= link_to "Sign Up", new_user_path, class: "button tiny radius"%> 
+          	<%else%>
+          	<%end%>
+        </h3>
             <div class="panel radius", style = "opacity:0.7">
 			  <h4>Explore the hidden treasure of Disney Land</h4>
 				<p>Receive rewards for taking pictures with Disney Characters while making a digital scrapbook of fun memories at Disneyland!</p>
@@ -286,6 +320,7 @@
       </div>
     </div>
   </footer>
+</body>
 <!-- <div class="row">
   <div class="large-4 columns" id ="badges">
 	  	<ul data-orbit data-options="animation:fade; navigation_arrows:false; bullets:false;slide_number: false; animation:'fade';timer_speed: 900">

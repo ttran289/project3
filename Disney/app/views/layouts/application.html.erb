@@ -8,47 +8,17 @@
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "vendor/modernizr","application" %>
+    <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.clearing.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <%= csrf_meta_tags %>
   </head>
 
-<body>
- <nav class="top-bar" data-topbar >
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to 'The Hunt', root_path%></h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
 
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <%if !current_user%>
-      <li ><%= link_to 'The Collection', badges_path%></li>
-      <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
-      <li ><%= link_to 'Go to the Gallery', pictures_path%></li>
-      <li><%= link_to "Sign in", new_sessions_path%></li>
-      <% else %>
-      <li class="active" ><%= link_to 'The Collection', badges_path%></li>
-      <li class = "has-dropdown">
-        <%= link_to 'Your Picture Collection', users_path%>
-          <ul class = "dropdown">
-            <li><%= link_to 'Collected Badges', my_badges_path%></li>
-          </ul>
-      </li>
-      <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
-      <li ><%= link_to 'Go to the Gallery', pictures_path%></li>
-      <li><%= link_to "Sign out", sessions_path, :method => :delete %></li>
-      <%end %>
-    </ul>
-  </section>
-</nav>
-<br>
 <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
-</body>
+
 </html>

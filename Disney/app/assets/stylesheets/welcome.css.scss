@@ -2,8 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#badges{
-	
+#welcome{
+	background-image: url(cinderellacastle.jpg);
+	background-size: cover;
+
 }
 
 #hunt,h2{
@@ -30,6 +32,7 @@ $break-large: 1024px;
 		width: 300px;
 		z-index: 10;
 	}
+	
 } 
 
 

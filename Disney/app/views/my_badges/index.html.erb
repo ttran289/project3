@@ -1,6 +1,38 @@
+ <body id="badgecollection">
+ <nav class="top-bar" data-topbar >
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to 'The Hunt', root_path%></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <%if !current_user%>
+      <li ><%= link_to 'The Collection', badges_path%></li>
+      <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
+      <li ><%= link_to 'Go to the Gallery', pictures_path%></li>
+      <li><%= link_to "Sign in", new_sessions_path%></li>
+      <% else %>
+      <li class="active" ><%= link_to 'The Collection', badges_path%></li>
+      <li class = "has-dropdown">
+        <%= link_to 'Your Picture Collection', users_path%>
+          <ul class = "dropdown">
+            <li><%= link_to 'Collected Badges', my_badges_path%></li>
+          </ul>
+      </li>
+      <li class="active"><%= link_to 'Where are all the badges', maps_path%></li>
+      <li ><%= link_to 'Go to the Gallery', pictures_path%></li>
+      <li><%= link_to "Sign out", sessions_path, :method => :delete %></li>
+      <%end %>
+    </ul>
+  </section>
+</nav>
  
- 
+ <h2>Badges you have earned</h2>
   <div class="row">
   <% current_user.badges.each do |b|%>
     <div class="large-3 columns small-6 columns">
@@ -15,7 +47,7 @@
  
  
   
- 
+ <!-- This start the footer -->
   <footer class="row">
     <div class="large-12 columns">
       <hr/>
@@ -34,4 +66,4 @@
       </div>
     </div>
   </footer>
-
+</body>

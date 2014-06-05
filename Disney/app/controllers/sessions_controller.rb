@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		@user = User.where(:email => params[:session][:email]).first
+		@user = User.find_by_email(params[:session][:email])
 		if @user == nil || !@user.authenticate(params[:session][:password])
-			flash[:error] = "This is wrong!! Wrong Combination!!"
+			flash[:error] = "Invalid email!! Password combination!!"
 			render 'new'
 		else
 			session[:remember_token] = @user.id
