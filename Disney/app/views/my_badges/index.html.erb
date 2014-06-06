@@ -36,7 +36,7 @@
   <div class="row">
   <% current_user.badges.each do |b|%>
     <div class="large-3 columns small-6 columns">
-      <div class="panel">
+      <div class="panel callout" id="badges">
           <%= image_tag "badges/" + b.url%>
 
           <p class ="text-center"><%=b.name%></p>

@@ -41,11 +41,13 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :development, :test do
-  gem 'rspec-rails'
+ gem 'rspec-rails'
 end
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'exifr'
+gem 'will_paginate', '~> 3.0'
+gem 'pry'
 

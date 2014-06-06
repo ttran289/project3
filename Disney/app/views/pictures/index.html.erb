@@ -35,9 +35,11 @@
 <!-- begin the display -->
 
  <div class="row" style="margin-top:30px">
-  <div class ="panel">
+  <div class ="panel callout radius">
   <div class="large-12 columns" >
-  <%= image_tag "gallery.jpg" %>
+    
+      <%= image_tag "gallery.jpg" %>
+   
 </div>
   <div class="large-12 columns" style="margin-top:20px">
  
@@ -59,15 +61,20 @@
                   <td><a class="th" href="#"><%= image_tag p.image(:medium) %></a></td>
                   <td><%= p.caption %></td>
                   <td><%= p.date%></td>
-                  <td><label>Lat:</label><%= p.latitude%></td>
-                  <td><label>Long:</label><%= p.longitude%></td>
-                  <td><%= link_to 'Delete',p, method: :delete%></td>
                 </tr>
 
             </div>
             <% end %>
+
           </div>
- 
+ <div class="row">  
+<div class="digg_pagination">
+    <div class="page_info" >
+      <%= page_entries_info @pictures %>
+    </div>
+    <%= will_paginate @pictures, :container => false %>
+  </div>
+</div>
      
           <div class="row" style ="margin-top:15px">
             <div class="large-12 columns">

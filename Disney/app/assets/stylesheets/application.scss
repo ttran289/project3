@@ -18,22 +18,33 @@
  
  */
 
+ #collection {
+
+ }
+#badges{
+	border-radius: 5px;
+}
+
+#picturepanel{
+	border-radius: 5px;
+}
  .panel{
  	border-radius: 15px;
  }
-
+#signout {
+background-image: url(belledance.jpg);
+background-size: cover;
+}
 #pictureindex{
 	background-color: #2399d7;
 
 }
 #userpictures{
-	background-image: url(disneypark.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #2399d7;
 }
 
  #signup{
-	background-image: url(cinderellacastle.jpg);
+	background-image: url(signup.jpg);
 	background-size: cover;
 
 }

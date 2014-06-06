@@ -34,16 +34,16 @@
 
 <div class="row">
     <div class="large-12 columns">
+      <div class ="panel callout radius" style="margin-top:30px">
+        <div class="row">
  
-      <div class="row">
+        <div class="large-4 small-12 columns" style="margin-top:30px">
  
-        <div class="large-4 small-12 columns">
- 
-          <img src="http://placehold.it/500x500&text=Logo" style ="margin-top:30px">
+          <%=image_tag "mickey.png"%>
  
           <div class="hide-for-small panel" style ="margin-top:30px">
-            <h3>Header</h3>
-            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
+            <h3>Memories</h3>
+            <h5 class="subheader">This is your Disney photo collection. All your memories are stored on this page. You can also click on a photo to see were your picture was taken. If you want to add a picture to your collection without earning a badge, click the new picture button below to upload any picture.
             </h5>
             <%= link_to 'New Picture', new_picture_path(current_user) %>
           </div>
@@ -53,8 +53,7 @@
           <div class="row" style ="margin-top:30px">
             <% @pictures.each do |p| %>
             <div class="large-4 small-6 columns">
-              
-			  <%= image_tag p.image.url(:medium)%>
+    			  <a class="th" href="#"><%= image_tag p.image.url(:medium)%></a>
 			  <br>
 			  
 			  <%= link_to 'Delete',p, method: :delete%>
@@ -64,7 +63,15 @@
           </div>
         </div>
       </div>
- 
+ </div>
+  <div class="row">  
+<div class="digg_pagination">
+    <div class="page_info" >
+      <%= page_entries_info @pictures %>
+    </div>
+    <%= will_paginate @pictures, :container => false %>
+  </div>
+</div>
       <footer class="row">
         <div class="large-12 columns"><hr/>
           <div class="row">

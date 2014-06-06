@@ -2,6 +2,7 @@ class PicturesController < ApplicationController
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
 	def index
 		@pictures = Picture.all
+		@pictures = Picture.paginate(:page => params[:page], :per_page => 8)
 		# @pictures = Picture.latitude
 		# @pictures = Picture.longitude
 	end
